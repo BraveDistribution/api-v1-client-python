@@ -15,6 +15,22 @@ from blockchain import statistics
 stats = statistics.get()
 ```
 
+#### `get_number_of_transactions_last_day`
+Get number of transactions in the last 24 hours. Returns a `String` object.
+
+Params:
+```
+api_code : str (optional)
+```
+
+Usage:
+```python
+from blockchain import statistics
+
+stats = statistics.get_number_of_transactions_last_day()
+```
+
+
 
 ### Response object field definitions
 
