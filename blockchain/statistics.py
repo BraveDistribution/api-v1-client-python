@@ -99,6 +99,7 @@ class Stats:
         self.miners_revenue_btc = s['miners_revenue_btc']
         self.market_price_usd = s['market_price_usd']
 
+
 class Chart:
     def __init__(self, c):
         self.status = c['status']
