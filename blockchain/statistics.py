@@ -21,6 +21,17 @@ def get(api_code=None):
     json_response = json.loads(response)
     return Stats(json_response)
 
+def get_number_of_transactions_last_day(api_code=None):
+    """ Get last day stats about number of transactions
+
+    :param str api_code: Blockchain.info API code (optional)
+    :return: string number of transactions in the past 24 hours
+    """
+    resource = 'q/24hrtransactioncount'
+    if api_code is not None:
+        resource += '?api_code=' + api_code
+    response = util.call_api(resource)
+    return response
 
 def get_chart(chart_type, time_span=None, rolling_average=None, api_code=None):
     """Get chart data of a specific chart type.
